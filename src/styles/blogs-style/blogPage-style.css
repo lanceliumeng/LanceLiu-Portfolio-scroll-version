@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* ======CSS reset=====  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width {
+    max-width: 1300px;
+    padding:0 80px;
+    margin: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+}
+
+/* =====nav bar control===== */
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+/* ---navbar navlinks list animation control--- */
+.navbar a{
+    color: black;
+}
+.navbar a:hover{
+    color: #ffb000;
+}
+.navbar li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition:0.5s;
+}
+.navbar li:hover{
+    font-weight: 900;
+    transform: translateY(-8px);
+}
+/* ---navbar social media icon animation control--- */
+.navbar .social-media i{
+    margin-right: 10px;
+    cursor: pointer;
+    transition:0.5s;
+}
+/* translateY repositions an element vertically on the 2D plane */
+.navbar .social-media i:hover{
+    transform: translateY(-8px);
+    color:#00e8fe;
+}
+
+/* =====header section style===== */
+.header{
+    text-align: center;
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+.header h1{
+    font-size: 50px;
+}
+.header h4{
+    font-weight:500;
+    font-size:20px;
+    margin-top: 15px;
+}
+
+/* ====hr style==== */
+hr{
+    margin-top: 20px;
+    border-top: 3px double;
+}
+
+/* ======main content section style===== */
+section.content-container{
+    padding: 40px 0;
+}
+.content-container .main-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.content-container .main-content .content-column{
+    width: calc(45% - 30px);
+}
+/* ======left content style===== */
+.main-content .content-column.left-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    align-content: center;
+    justify-content: center;
+}
+/* ---left content img style--- */
+ .left-content img{
+    height: 440px;
+    width: 100%;
+    margin: 15px 0;
+}
+/* ---left content text style--- */
+.left-content h2, 
+.left-content h3 {
+    text-align: center;
+    font-family:'Poppins',sans-serif;
+}
+.left-content h3{
+    margin: 15px 0;
+}
+.left-content p{
+    text-align: justify;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* ======right content style====== */
+.main-content .content-column.right-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 20px;
+}
+.right-content .avatar-content{
+    text-align: center;
+}
+.right-content .avatar-content p{
+    margin:10px 0;
+    font-family:'Dancing Script', cursive;
+}
+.right-content input{
+    width: 160px;
+}
+.right-content input::placeholder{
+    text-align: center;
+}
+.right-content button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    width: 100px;
+}
+.right-content button:hover{
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+.right-content h5{
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.right-content .newsletter, .right-content .search, .right-content .topics{
+    margin-top:5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.right-content .newsletter .btn, .right-content .search .btn{
+    margin:8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.right-content .topics ul li{
+    cursor: pointer;
+    font-weight: 500;
+    margin: 3px 0;
+    font-size: 15px;
+}
+.right-content .popular-posts{
+    text-align: center;
+    margin-top: 10px;
+}
+.right-content .popular-posts p{
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =====footer style===== */
+footer{
+    margin-top: 3%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+/* =======responsive start===== */
+/* -----breakpoint 01------ */
+@media screen and (max-width:1000px) {
+    .content-container .main-content .content-column{
+        width: 300px;
+    }
+}
+/* -----breakpoint 02------ */
+@media screen and (max-width:970px){
+    .navbar .max-width{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar .max-width .social-media{
+        margin-top: 20px;
+    }
+    .header h1{
+        font-size: 38px;
+    }
+    .header h4{
+        font-weight:600;
+        font-size:15px;
+    }
+    .content-container .main-content{
+        text-align:;
+    }
+    .content-container .main-content .content-column{
+        width: 42%;
+    }
+    .main-content .content-column.left-content h2{
+        font-size: 20px;
+    }
+    .main-content .content-column.left-content p{
+        font-size: 18px;
+    }
+    .content-container .main-content .right-content{
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-container .main-content .right-content img{
+        width:100%;
+    }
+}
+
+/* -----breakpoint 03------ */
+@media screen and (max-width:930px){
+    .max-width{
+        padding: 0 45px;
+    }
+.content-container .main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.content-container .main-content .content-column{
+    width: 70%;
+}
+.content-container .main-content .left-content h2 {
+    font-size: 25px;
+}
+.content-container .main-content .right-content{
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-content .content-column.right-content{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.main-content .content-column.right-content .form-content{
+    text-align: center;
+}
+.main-content .content-column.right-content{
+    margin-left: 15%;
+}
+.content-container .content-column.left-content img{
+    width: 100%;
+}
+.content-container .main-content .right-content .avatar-content{
+    display: none;
+}
+}
+/* -----breakpoint 04------ */
+@media screen and (max-width:780px){
+    .max-width{
+        padding: 0 30px;
+    }
+    .content-container .main-content .content-column{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+/* -----breakpoint 05------ */
+@media screen and (max-width:590px){
+    .max-width{
+        padding: 0 20px;
+    }
+    .navbar .max-width .nav-links ul li{
+        font-size: 12px;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+   .content-container .left-content .featured-article h2{
+        font-size: 18px;
+    }
+    .content-container .main-content .content-column{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .content-container .content-column.left-content img{
+        width: 100%;
+    }
+
+}
+/* -----breakpoint 06------ */
+@media screen and (max-width:440px){
+    .max-width{
+        padding: 0 5px;
+    }
+    .navbar .max-width {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .header h1{
+        font-size: 20px;
+    }
+    .content-container .main-content{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
